@@ -1,0 +1,169 @@
+/* ----------- Global Styling ----------- */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------- Main Container ----------- */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    width: 360px;
+    border-radius: 18px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
+    color: #ffffff;
+    animation: slideUp 0.9s ease;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* ----------- Labels ----------- */
+label {
+    display: block;
+    margin: 12px 0 5px;
+    font-size: 14px;
+}
+
+/* ----------- Select & Input Boxes ----------- */
+select, input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-bottom: 12px;
+    background: rgba(100, 150, 200, 0.5);
+    color: #fff;
+    transition: 0.3s ease;
+} 
+   
+select:focus, input[type="password"]:focus {
+    background: rgba(100, 150, 200, 0.7);
+    box-shadow: 0px 0px 8px rgba(255,255,255,0.6);
+}
+
+/* Select option styling */
+select option {
+    background: #ffffff;
+    color: #333333;
+}
+
+/* ----------- Button Styling ----------- */
+.login-btn, .role-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+    color: #4e4376;
+}
+
+/* Hover animation */
+.login-btn:hover, .role-btn:hover {
+    transform: scale(1.05);
+    background: #f1f1f1;
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.8);
+}
+
+/* Click/Active animation */
+.login-btn:active, .role-btn:active {
+    transform: scale(0.98);
+}
+
+/* ----------- Entry Page Buttons ----------- */
+.button-box {
+    display: grid;
+    gap: 15px;
+}
+
+/* Smooth transition for container hover */
+.container:hover {
+    box-shadow: 0px 4px 25px rgba(255,255,255,0.45);
+    transition: 0.4s;
+}
+
+/* ----------- Complaint Register Form ----------- */
+.form-box {
+    width: 450px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 15px;
+    background: rgba(255,255,255,0.12);
+    color: #ffffff;
+}
+
+.form-box textarea {
+    height: 120px;
+}
+
+.form-box button {
+    display: block;
+    width: auto;
+    padding: 12px 40px;
+    background: #ffffff;
+    color: #4f54ff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    margin: 18px auto 0; /* centers the button horizontally */
+}
+
+.form-box button:hover {
+    letter-spacing: 2px;
+}

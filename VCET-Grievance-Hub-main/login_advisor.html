@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advisor Login</title>
+
+<style>
+body {
+    margin: 0; padding: 0; height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex; justify-content: center; align-items: center;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(255,255,255,0.12);
+    border-radius: 50%;
+    animation: float 6s infinite ease-in-out alternate;
+}
+.shape:nth-child(1){width:120px;height:120px;top:10%;left:15%;}
+.shape:nth-child(2){width:170px;height:170px;bottom:8%;left:10%;}
+.shape:nth-child(3){width:150px;height:150px;top:20%;right:12%;}
+.shape:nth-child(4){width:90px;height:90px;bottom:20%;right:20%;}
+
+@keyframes float { from {transform:translateY(0);} to {transform:translateY(30px);} }
+
+.container {
+    background: rgba(255,255,255,0.15);
+    padding: 40px; width: 400px;
+    border-radius: 18px;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.25);
+    color: black;
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    background: rgba(255,255,255,0.35);
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #ffffff, #dfe9f3);
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #243b55;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.login-btn:hover {
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="shape"></div><div class="shape"></div>
+<div class="shape"></div><div class="shape"></div>
+
+<div class="container">
+    <h2>Advisor Login</h2>
+
+    <form action="login_advisor.php" method="POST">
+
+        <label>Advisor Name</label>
+        <input type="text" name="advisor_name" required placeholder="Enter Advisor Name">
+
+        <label>Select Department</label>
+        <select name="department" required>
+            <option value="">-- Select Department --</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="AI">AI</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+        </select>
+
+        <label>Email</label>
+        <input type="email" name="advisor_email" required placeholder="Enter Advisor Email">
+
+        <label>Password</label>
+        <input type="password" name="password" required placeholder="Enter Password">
+
+        <button class="login-btn">Login</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Infrastructure Login</title>
+
+<style>
+/* Same CSS reused */
+body {
+    margin: 0; padding: 0; height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex; justify-content: center; align-items: center;
+    overflow: hidden; animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn { from {opacity:0; transform:scale(1.05);} to {opacity:1; transform:scale(1);} }
+
+.shape { position:absolute; background:rgba(255,255,255,0.12); border-radius:50%;
+    animation: float 6s infinite ease alternate; }
+.shape:nth-child(1){width:120px;height:120px;top:10%;left:15%;}
+.shape:nth-child(2){width:170px;height:170px;bottom:8%;left:10%;}
+.shape:nth-child(3){width:150px;height:150px;top:18%;right:12%;}
+.shape:nth-child(4){width:90px;height:90px;bottom:22%;right:18%;}
+
+@keyframes float { from{transform:translateY(0);} to{transform:translateY(25px);} }
+
+.container {
+    background: rgba(255,255,255,0.15);
+    padding: 40px; width: 400px; border-radius: 18px;
+    backdrop-filter: blur(13px); color: white;
+    box-shadow: 0 4px 25px rgba(255,255,255,0.3);
+    animation: slideUp 1.2s ease; text-align:center;
+}
+
+@keyframes slideUp { from{opacity:0;transform:translateY(35px);} to{opacity:1;transform:translateY(0);} }
+
+input {
+    width:100%; padding:12px; border:none; border-radius:10px;
+    background:rgba(255,255,255,0.25); margin-bottom:12px;
+    color:black; font-size:14px; transition:.3s;
+}
+input:focus {
+    background:rgba(255,255,255,0.35);
+    box-shadow:0px 0px 10px rgba(255,255,255,0.7);
+}
+
+.login-btn {
+    width:100%; padding:13px; background:linear-gradient(135deg,#fff,#dfe9f3);
+    border:none; border-radius:12px; font-size:17px; font-weight:700;
+    color:#243b55; cursor:pointer; transition:.3s;
+}
+.login-btn:hover { transform:translateY(-3px) scale(1.05); }
+</style>
+</head>
+
+<body>
+
+<div class="shape"></div><div class="shape"></div><div class="shape"></div><div class="shape"></div>
+
+<div class="container">
+    <h2>Infrastructure Login</h2>
+
+    <form action="login_infra.php" method="POST">
+        <input type="hidden" name="role" value="infra">
+
+        <label>Email</label>
+        <input type="email" name="email" required placeholder="Enter Email">
+
+        <label>Password</label>
+        <input type="password" name="password" required placeholder="Enter Password">
+
+        <button class="login-btn">Login</button>
+    </form>
+</div>
+
+</body>
+</html>

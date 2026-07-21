@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student / CR Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="student.js" ></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student / CR Login</h2>
+
+    <form id="studentLoginForm" action="login_student.php" method="POST" onsubmit="return ValidateStadentLogin()">
+
+        <input type="hidden" name="role" value="student">
+
+        
+        <!-- CR Name -->
+
+        <label for="crname">Select CR Name</label>
+        <select name="crname" id="crname" required>
+            <option value="">-- Select CR Name --</option>
+            <option value="Arun Kumar">Arun Kumar</option>
+            <option value="Priya S">Priya S</option>
+            <option value="Mohammed Iqbal">Mohammed Iqbal</option>
+            <option value="Sneha R">Sneha R</option>
+            <option value="Dinesh P">Dinesh P</option>
+        </select>
+
+        <!-- CR USN -->
+        <label for="usn">Select CR USN</label>
+        <select name="usn" id="usn" required>
+            <option value="">-- Select CR USN --</option>
+            <option value="VCET001">VCET001</option>
+            <option value="VCET002">VCET002</option>
+            <option value="VCET003">VCET003</option>
+            <option value="VCET004">VCET004</option>
+            <option value="VCET005">VCET005</option>
+        </select>
+
+        <label for="email">Email </label>
+        <input type="email" name="email" id="email" required style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 100%;
+    padding: 10px;
+    font-size: 14px;
+      background: rgba(100, 150, 200, 0.5);
+    color: #fff;
+    transition: 0.3s ease;">
+
+        <!-- Password -->
+        <label for="password">Password (Provided by College)</label>
+        <input type="password" name="password" id="password" required>
+
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+
+</div>
+
+</body>
+</html>

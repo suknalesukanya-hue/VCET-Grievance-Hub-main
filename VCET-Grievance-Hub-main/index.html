@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VCET Grievance Portal</title>
+
+<!-- INLINE CSS -->
+<style>
+
+/* ---------------- GLOBAL PAGE STYLE ---------------- */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+    color: #fff;
+    text-align: center;
+}
+
+/* Fade-In Effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(1.05); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ---------------- FLOATING SHAPES ANIMATION ---------------- */
+.shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: float 6s infinite ease-in-out alternate;
+}
+
+.shape:nth-child(1) { width: 120px; height: 120px; top: 10%; left: 15%; animation-duration: 7s; }
+.shape:nth-child(2) { width: 180px; height: 180px; bottom: 5%; left: 10%; }
+.shape:nth-child(3) { width: 150px; height: 150px; top: 20%; right: 12%; animation-duration: 8s; }
+.shape:nth-child(4) { width: 90px; height: 90px; bottom: 20%; right: 18%; animation-duration: 5.5s; }
+
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(30px); }
+}
+
+/* ---------------- CENTRAL WELCOME H1 ---------------- */
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    animation: slideUp 1.2s ease;
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------- SHORT DESCRIPTION ---------------- */
+.project-description {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+/* ---------------- BUTTON BOX BELOW DESCRIPTION ---------------- */
+.header-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.role-btn {
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #ffffff, #dfe9f3);
+    color: #2a5298;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(255,255,255,0.3);
+}
+
+.role-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0px 6px 20px rgba(255,255,255,0.6);
+}
+
+.role-btn:active {
+    transform: scale(0.97);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+    .project-description {
+        font-size: 16px;
+    }
+    .header-buttons {
+        gap: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Animated Shapes -->
+<div class="shape"></div>
+<div class="shape"></div>
+<div class="shape"></div>
+<div class="shape"></div>
+
+<!-- CENTRAL WELCOME H1 -->
+<h1>Welcome to VCET Grievance Hub</h1>
+
+<!-- SHORT DESCRIPTION BELOW H1 -->
+<div class="project-description">
+    A simple portal to submit and track grievances effectively.
+</div>
+
+<!-- BUTTONS BELOW DESCRIPTION -->
+<div class="header-buttons">
+    <form action="login_student.html"><button class="role-btn">Student / CR</button></form>
+    <form action="login_advisor.html"><button class="role-btn">Class Advisor</button></form>
+    <form action="login_hod.html"><button class="role-btn">HOD</button></form>
+    <form action="login_principle.html"><button class="role-btn">Principal</button></form>
+    <form action="login_infra.html"><button class="role-btn">Infrastructure Dept</button></form>
+</div>
+
+</body>
+</html>
